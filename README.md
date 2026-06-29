@@ -1,34 +1,33 @@
-# 🌱 Invernadero Inteligente Predictivo (IoT + Machine Learning)
+# Predictive Smart Greenhouse - IoT & ML System
 
-Este proyecto automatiza el monitoreo y riego de cultivos a través de un ecosistema de Internet de las Cosas (IoT). A diferencia de los sistemas tradicionales basados en temporizadores o reglas estáticas, este invernadero utiliza un modelo de Machine Learning para predecir la cantidad exacta de agua necesaria basándose en las tasas de evaporación en tiempo real.
+An automated, smart agricultural solution engineered to process real-time environmental data and optimize cultivation parameters through predictive computing.
 
-##  Características Principales
+## Complete Tech Stack
 
-*  **Riego Predictivo (IA):** Utiliza un modelo *Random Forest Regressor* (precisión del 99.8%) para calcular dinámicamente los mililitros de agua requeridos, evitando el estrés hídrico.
-*  **Dashboard de Monitoreo Global:** Interfaz web local expuesta a internet mediante un túnel seguro (Ngrok) para visualización de métricas en tiempo real.
-*  **Notificaciones Push:** Integración con la API de Telegram para enviar alertas automatizadas sobre riesgos climáticos (sequía, temperaturas extremas, riesgo de hongos).
-*  **Control Físico Independiente:** Actuadores que controlan la irrigación (bomba de agua) y la disipación de calor (ventilador) basados en las predicciones del servidor.
+### Hardware Components
+* Microcontroller: Arduino Uno
+* Sensors: DHT11 Temperature & Humidity Sensor, Analog Soil Moisture Sensor
+* Actuators & Control: L298N H-Bridge Module, Submersible Water Pump, DC Fan
 
-## 🛠️ Stack Tecnológico
+### Software & Architecture
+* Backend: Python 3, Flask
+* Machine Learning: Scikit-Learn, Pandas, Joblib
+* Networking & APIs: PySerial (Serial Communication), Telegram Bot API
+* Frontend: HTML5, CSS3, JavaScript (Fetch API)
 
-**Hardware:**
-* Arduino Uno
-* Sensor de Temperatura y Humedad DHT11
-* Sensor Analógico de Humedad de Suelo
-* Módulo Puente H L298N
-* Bomba de agua sumergible y ventilador DC
+---
 
-**Software:**
-* **Backend:** Python 3, Flask
-* **Machine Learning:** Scikit-Learn, Pandas, Joblib
-* **Comunicación y Redes:** PySerial, Ngrok, API de Telegram
-* **Frontend:** HTML5, CSS3, JavaScript (Fetch API)
+## Core Architecture & Features
 
-## ⚙️ Instalación y Configuración
+### Predictive Automation (Machine Learning)
+* Trained and deployed a Random Forest model with 99.8% accuracy utilizing Scikit-Learn and Pandas to predict precise water requirements based on real-time soil and ambient variables.
+* Models are serialized and loaded dynamically via Joblib for fast inference loops.
 
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+### IoT Data Pipeline & Networking
+* Developed a Flask API that parses continuous incoming streams from the Arduino Uno via PySerial.
+* Implemented real-time evaluation loops to balance greenhouse variables dynamically.
 
-### 1. Clonar el repositorio
-```bash
-git clone [https://github.com/TavoMtz/invernadero-inteligente.git](https://github.com/TavoMtz/invernadero-inteligente.git)
-cd invernadero-inteligente
+### Automated Notification Gateway
+* Integrated the Telegram API to deploy an instant alerting system, broadcasting critical thresholds or autonomous irrigation system updates directly to stakeholders.
+
+---
