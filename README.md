@@ -10,7 +10,7 @@ An automated, smart agricultural solution engineered to process real-time enviro
 * Actuators & Control: L298N H-Bridge Module, Submersible Water Pump, DC Fan
 
 ### Software & Architecture
-* Backend: Python 3, Flask
+* Backend: Python, Flask
 * Machine Learning: Scikit-Learn, Pandas, Joblib
 * Networking & APIs: PySerial (Serial Communication), Telegram Bot API
 * Frontend: HTML5, CSS3, JavaScript (Fetch API)
